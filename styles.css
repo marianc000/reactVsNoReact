@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+}
+
+.row>div {
+    display: inline-block;
+    border: 1px solid gainsboro;
+    box-sizing: border-box;
+    width: 5%;
+}
+.row {
+    height: 20px;
+    content-visibility: auto;
+}
+ 
+button.selected {
+    background-color: palegreen;
+}
+
+#startBtn {
+    margin-left: 2em;
+    background-color: orange;
+}
+
+#controls {
+    text-align: center;
+    margin: 0.5em;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 2em;
+}
+
+  th,   td {
+    padding: 0.5em;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    width: initial;
+}
+
+ td:first-child {
+    text-align: left;
+}
+ 
+
+* {
+    font-family: arial;
+}
+
+caption {
+    font-size: 1.2em;
+}
+
+h1 {
+    margin-bottom: 0.2em;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
