@@ -25,7 +25,7 @@ const react2 = () => rrender(data2);
 const rempty = () => promise(rclear);
 
 export default function run() {
-    const times = 2;
+    const times = 3;
     let p = Promise.resolve().then(clear);
 
     for (let i = 0; i < times; i++) {
@@ -39,19 +39,20 @@ export default function run() {
     }
 
     // without clearing
+    p = p.then(() => promise(noreact));
+
     for (let i = 0; i < times; i++) {
         p = p.then(() => execute('noreact noclear', noreact))
     }
 
-    p = p.then(empty);
+    p = p.then(empty).then(() => promise(react));
 
     for (let i = 0; i < times; i++) {
         p = p.then(() => execute('react noclear', react))
     }
-
+    //
     p = p.then(rempty).then(() => promise(noreact2));
 
-    //
     for (let i = 0; i < times; i++) {
         p = p.then(() => execute('noreact cell', noreact))
             .then(() => execute('noreact cell2', noreact2))

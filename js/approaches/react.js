@@ -3,8 +3,8 @@ function Row({
 }) {
     return React.createElement("div", {
         className: "row"
-    }, row.map(text => React.createElement("div", {
-        key: text,
+    }, row.map((text,i) => React.createElement("div", {
+        key: i,
         title: text
     }, text)));
 }
@@ -12,8 +12,8 @@ function Row({
 function Table({
     rows
 }) {
-    return rows.map(row => React.createElement(Row, {
-        key: row.toString(),
+    return rows.map((row,i) => React.createElement(Row, {
+        key: i,
         row: row
     }));
 }

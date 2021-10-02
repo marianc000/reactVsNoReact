@@ -16,15 +16,14 @@ function table(caption, val) {
 }
 
 function separate() {
-    const dom = {}, paint = {};
+    const times= {} ;
     console.log(results);
-    console.log(JSON.stringify(results)); 
+   
     Object.entries(results).forEach(([k, vals]) => {
-        dom[k] = vals.map(({ start, domDone }) => domDone - start);
-        paint[k] = vals.map(({ domDone, rendered }) => rendered - domDone);
+        times[k] = vals.map(({ start, rendered }) => rendered - start);
     });
 
-    return { dom, paint };
+    return times;
 }
 
 function addAverage(data) {
@@ -49,9 +48,8 @@ function displayTable(data, caption) {
 }
 
 export default function showResults() {
-    const { dom, paint } = separate();
-    displayTable(dom, 'Changing DOM, ms');
-    displayTable(paint, 'Painting, ms');
+    const times= separate();
+    displayTable(times, 'Changing DOM and painting, ms');
 }
 
 

@@ -32,7 +32,7 @@ button.selected {
 
 table {
     border-collapse: collapse;
-    margin-bottom: 2em;
+    margin: 1em auto;
 }
 
   th,   td {
