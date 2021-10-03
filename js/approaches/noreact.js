@@ -1,3 +1,4 @@
+// noreact.js
 function row(vals) {
     const rowDiv = document.createElement("div");
     rowDiv.className = 'row';

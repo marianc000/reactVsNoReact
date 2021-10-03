@@ -1,18 +1,14 @@
-function Row({
-    row
-}) {
+function Row({ row }) {
     return React.createElement("div", {
         className: "row"
-    }, row.map((text,i) => React.createElement("div", {
+    }, row.map((text, i) => React.createElement("div", {
         key: i,
         title: text
     }, text)));
 }
 
-function Table({
-    rows
-}) {
-    return rows.map((row,i) => React.createElement(Row, {
+function Table({ rows }) {
+    return rows.map((row, i) => React.createElement(Row, {
         key: i,
         row: row
     }));

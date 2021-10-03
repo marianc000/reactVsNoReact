@@ -1,14 +1,14 @@
 function Row({ row }) {
     return <div className="row">
-        {row.map(text => <div key={text} title={text} >{text}</div>)}
+        {row.map((text, i) => <div key={i} title={text}>{text}</div>)}
     </div>
 }
 
 function Table({ rows }) {
-    return rows.map(row => <Row key={row.toString()} row={row} />);
+    return rows.map((row, i) => <Row key={i} row={row}/>);
 }
 
-function reactTable(data) {
+function render(data) {
     ReactDOM.render(<Table rows={data} />, root);
 }
 
