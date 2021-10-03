@@ -26,7 +26,7 @@ const rempty = () => promise(rclear);
 
 export default function run() {
     const times = 10;
-    let p = Promise.resolve().then(empty);
+    let p = Promise.resolve().then(()=>promise(noreact)).then(empty);
 
     for (let i = 0; i < times; i++) {
         p = p.then(() => execute('noreact', noreact))
