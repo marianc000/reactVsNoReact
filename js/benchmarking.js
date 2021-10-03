@@ -25,7 +25,7 @@ const react2 = () => rrender(data2);
 const rempty = () => promise(rclear);
 
 export default function run() {
-    const times = 3;
+    const times = 10;
     let p = Promise.resolve().then(clear);
 
     for (let i = 0; i < times; i++) {
