@@ -21,7 +21,7 @@ export function execute(label, render) {
             setTimeout(() => {
                 console.timeEnd(label);
                 addResult(label, start, Date.now());
-                setTimeout(resolve, 100);
+                setTimeout(resolve);
             });
         });
     });
